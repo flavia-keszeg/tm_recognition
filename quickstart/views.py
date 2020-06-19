@@ -19,9 +19,14 @@ class ObjectRecognitionViewSet(viewsets.ViewSet):
 
         detected_objects = object_recognition(image, actual_size)
 
-        return Response({
-            'number of people with less than 2m between them': detected_objects
-        })
+        # serialize to HTTP response
+        image_data = open("quickstart/recognition/object_recognition/imagenew.jpg", "rb").read()
+        return HttpResponse(image_data, content_type="image/png")
+
+        # return Response({
+        #     'number of people with less than 2m between them': detected_objects,
+        #     'picture': response
+        # })
 
 
 class FaceRecognitionViewSet(viewsets.ViewSet):
