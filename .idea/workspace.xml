@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20297cf5-c933-488b-aa7e-b605d6f9b370" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quickstart/recognition/object_recognition/object_recognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/recognition/object_recognition/object_recognition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

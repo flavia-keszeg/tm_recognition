@@ -15,11 +15,12 @@ class ObjectRecognitionViewSet(viewsets.ViewSet):
         deserialized_data = serializer.validated_data
 
         image = deserialized_data["image"]
+        actual_size = deserialized_data["actual_size"]
 
-        detected_objects = object_recognition(image)
+        detected_objects = object_recognition(image, actual_size)
 
         return Response({
-            'response': detected_objects
+            'number of people with less than 2m between them': detected_objects
         })
 
 
