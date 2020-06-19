@@ -1,3 +1,5 @@
+from django.http import HttpResponse
+from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
 
@@ -20,13 +22,14 @@ class ObjectRecognitionViewSet(viewsets.ViewSet):
         detected_objects = object_recognition(image, actual_size)
 
         # serialize to HTTP response
-        image_data = open("quickstart/recognition/object_recognition/imagenew.jpg", "rb").read()
-        return HttpResponse(image_data, content_type="image/png")
+        # image_data = open("quickstart/recognition/object_recognition/imagenew.jpg", "rb").read()
+        # return HttpResponse(image_data, content_type="image/png")
 
-        # return Response({
-        #     'number of people with less than 2m between them': detected_objects,
-        #     'picture': response
-        # })
+        image_link = "http://127.0.0.1:8000/home/recognised_people/"
+        return Response({
+            'number of people with less than 2m between them': detected_objects,
+            'picture': image_link
+        })
 
 
 class FaceRecognitionViewSet(viewsets.ViewSet):
@@ -44,3 +47,18 @@ class FaceRecognitionViewSet(viewsets.ViewSet):
         return Response({
             'response': recognized_faces
         })
+
+
+def main_page(request):
+    return render(request, 'main_page.html', {})
+
+
+def selfie_time_page(request):
+    return render(request, 'selfie_time_page.html', {})
+
+
+def social_distancing_page(request):
+    return render(request, 'social_distancing_page.html', {})
+
+def recognised_people(request):
+    return render(request, 'recognised_people.html', {})

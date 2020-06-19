@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block page_content %}
+<head>
+    <meta charset="UTF-8">
+    <title>It's selfie time!</title>
+</head>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #d0e1e1;">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/home/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="">It's selfie time!<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/home/social_distancing_page/">Social Distancing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h2 class="p-3">Meet the team...</h2>
+<div class="row">
+    <div class="col-4">
+        <div class="card shadow mx-auto bg-white">
+            <img class="card-img-top" style="height: 300px" src="https://i.pinimg.com/originals/17/d9/40/17d9400aa42488dc4de693d7eeb935d7.jpg" alt="selfie time!">
+            <div class="card-body">
+                <p class="card-text">Hi! My name is Andreea!</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card shadow mx-auto bg-white">
+            <img class="card-img-top" style="height: 300px" src="https://memegenerator.net/img/images/300x300/11737679.jpg" alt="social distancing">
+            <div class="card-body">
+                <p class="card-text">Nice to meet you! I'm Flavia.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card shadow mx-auto bg-white">
+            <img class="card-img-top" style="height: 300px" src="https://i.pinimg.com/originals/03/7f/36/037f36bbc989ad92cc40a2c312c75b8b.jpg" alt="selfie time!">
+            <div class="card-body">
+                <p class="card-text">I'm Raluca. How are you doing?</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-body">
+    <p class="card-text p-1">Try our face recognition app and see if it recognises us!</p>
+    <p class="card-text p-1"> The only thing you need to do is upload a picture of us.</p>
+    <a href="http://127.0.0.1:8000/home/face_recognition/"
+       class="btn btn-info">
+        Go!
+    </a>
+</div>
+</div>
+{% endblock %}

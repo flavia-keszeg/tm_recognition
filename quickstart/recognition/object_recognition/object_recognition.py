@@ -1,9 +1,8 @@
 import math
 import os
-import math
+
 import numpy as np
 from PIL import Image
-
 from imageai.Detection import ObjectDetection
 
 
@@ -35,15 +34,11 @@ def object_recognition(imageName, actual_size):
     for eachObject in detections:
         detected_objects[eachObject["name"]].append(eachObject["box_points"])
 
-    points=calculate_central_point_of_a_person(detected_objects)
-    distance=calculate_distance_between_people(points, actual_size, width)
-    nr_of_people=number_of_persons_with_less_than_2m(distance)
+    points = calculate_central_point_of_a_person(detected_objects)
+    distance = calculate_distance_between_people(points, actual_size, width)
+    nr_of_people = number_of_persons_with_less_than_2m(distance)
 
     return nr_of_people
-
-
-
-
 
 
 def calculate_central_point_of_a_person(objects):
@@ -70,22 +65,23 @@ def calculate_distance_between_people(list_of_points, act_dist, width):
     :return:
     """
     # act_dist=10
-    distance={}
+    distance = {}
     for point1 in list_of_points:
         x1, y1 = point1
         for point2 in list_of_points:
-            ok=0
-            x2, y2=point2
-            if x1 != x2 and y1!=y2:
-                dist=math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
-                actual_dist=(dist/width)*act_dist
+            ok = 0
+            x2, y2 = point2
+            if x1 != x2 and y1 != y2:
+                dist = math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+                actual_dist = (dist / width) * act_dist
                 for points in distance:
-                    p1, p2=points
-                    if p1==point2 and p2==point1:
-                        ok=1
-                if ok==0:
-                    distance[(point1, point2)]=actual_dist
+                    p1, p2 = points
+                    if p1 == point2 and p2 == point1:
+                        ok = 1
+                if ok == 0:
+                    distance[(point1, point2)] = actual_dist
     return distance
+
 
 def number_of_persons_with_less_than_2m(distance_between):
     count = 0

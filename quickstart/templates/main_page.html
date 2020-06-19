@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block page_content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #d0e1e1;">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="selfie_time_page/">It's selfie time!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="social_distancing_page/">Social Distancing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1 class="p-3">Our Projects</h1>
+<div class="row">
+    <div class="col-6">
+        <div class="card shadow mx-auto bg-white">
+            <img class="card-img-top" style="height: 250px" src="https://lh3.googleusercontent.com/proxy/5SCjdR0FpdhkM5YKxC95ejZB-00-GybvPHi5Clt8fX1MAXYXcDdYpMR6OF_45d_Y9A2dM1Dc-mzuncBcpSeJK7kTyAIgV15e1XBEfzkaGZ0CMyrr7YIvJtHeDhHLDSdB48gTEvVnXw35vkZk4ZKszwqNOPg" alt="selfie time!">
+            <div class="card-body">
+                <h5 class="card-title">It's selfie time!</h5>
+                <p class="card-text">Check out our cool image recognition app!</p>
+                <a href="selfie_time_page/"
+                   class="btn btn-info">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card shadow mx-auto bg-white">
+            <img class="card-img-top" style="height: 250px" src="https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2020/3/19/d42a4e22ee344ff5a9f5061d4869cee1_18.jpg" alt="social distancing">
+            <div class="card-body">
+                <h5 class="card-title">Social Distancing</h5>
+                <p class="card-text">Find out more about social distancing around the globe!</p>
+                <a href="social_distancing_page/"
+                   class="btn btn-info">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
