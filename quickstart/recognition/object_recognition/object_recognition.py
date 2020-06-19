@@ -23,5 +23,6 @@ def object_recognition(imageName):
 
     for eachObject in detections:
         detected_objects[eachObject["name"]].append(eachObject["percentage_probability"])
+        detected_objects[eachObject["name"]].append(eachObject["box_points"])
 
     return detected_objects

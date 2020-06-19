@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
 
@@ -38,3 +39,14 @@ class FaceRecognitionViewSet(viewsets.ViewSet):
         return Response({
             'response': recognized_faces
         })
+
+def main_page(request):
+    return render(request, 'main_page.html', {})
+
+def selfie_time_page(request):
+    return render(request, 'selfie_time_page.html', {})
+
+def social_distancing_page(request):
+    return render(request, 'social_distancing_page.html', {})
+
+

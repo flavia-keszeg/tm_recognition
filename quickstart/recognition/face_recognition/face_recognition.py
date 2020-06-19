@@ -13,8 +13,14 @@ def face_recognition(imageName):
 
     predictions, probabilities = prediction.predictImage(imageName, result_count=3)
 
-    recognized_faces = {}
+    person = ''
+    max = '0'
     for eachPrediction, eachProbability in zip(predictions, probabilities):
-        recognized_faces[eachPrediction] = eachProbability
+        if eachProbability > max:
+            max = eachProbability
+            person = eachPrediction
 
-    return recognized_faces
+    if max >= '80':
+        return "It's " + person + "!"
+    else:
+        return "Didn't recognise anyone"
