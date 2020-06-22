@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block page_content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Social distancing</title>
+</head>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #d0e1e1;">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/home/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/home/selfie_time_page/">It's selfie time!</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="">Social Distancing<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h3 class="p-3">Social distancing</h3>
+<div class="row">
+    <div class="col-md-8">
+        <img class="card-img-top" src="https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2020/3/19/d42a4e22ee344ff5a9f5061d4869cee1_18.jpg" alt="social distancing">
+    </div>
+    <div class="card-body col-md-4">
+        <p class="card-text p-1">Try our object recognition app and see the the percentage of people who respect social distancing.</p>
+        <p class="card-text p-1">All you have to do is upload a picture.</p>
+        <a href="http://127.0.0.1:8000/home/object_recognition/"
+           class="btn btn-info">
+            Go!
+        </a>
+    </div>
+</div><br>
+
+<h3 class="p-3">Our research about outbreaks of coronavirus infection</h3>
+
+</div>
+{% endblock %} 

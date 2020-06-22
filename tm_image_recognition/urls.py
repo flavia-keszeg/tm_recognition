@@ -17,6 +17,9 @@ from django.urls import include, path
 
 from quickstart.urls import urlpatterns as api_urlpatterns
 
+from quickstart.views import main_page
+
 urlpatterns = [
-    path("api/", include(api_urlpatterns))
+    path('home/', main_page, name='main_page'),
+    path("home/", include(api_urlpatterns)),
 ]
