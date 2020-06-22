@@ -26,6 +26,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'media')
+]
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -34,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'rest_framework',
+    'quickstart',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +57,7 @@ ROOT_URLCONF = 'tm_image_recognition.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "DIRS": ["tm_image_recognition/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,4 +116,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/media/'
