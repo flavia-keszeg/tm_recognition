@@ -16,11 +16,11 @@ def object_recognition(imageName, actual_size):
     detector.loadModel()
     detections = detector.detectObjectsFromImage(
         input_image=imageName,
-        output_image_path=os.path.join(execution_path, "quickstart/recognition/object_recognition/imagenew.jpg"))
+        output_image_path=os.path.join(execution_path, "media/images/imagenew.jpg"))
 
     # opening the image and loading it into a
     # numpy array using PIL and numpy
-    img = Image.open("quickstart/recognition/object_recognition/imagenew.jpg")
+    img = Image.open("media/images/imagenew.jpg")
     pixels = np.array(img)
 
     # dimensions of the image

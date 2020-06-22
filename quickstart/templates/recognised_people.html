@@ -1,13 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
 {% block page_content %}
-<img style="height: 300px" src='./quickstart/recognition/object_recognition/imagenew.jpg' alt="people">
-<a href="http://127.0.0.1:8000/home/object_recognition/"
-           class="btn btn-info">
-            Upload a new photo
-        </a>
-<a href="http://127.0.0.1:8000/home/"
-           class="btn btn-info">
-            Home
-        </a>
+    <img style="height: 300px; display:block; margin-bottom: 10px;" src="{% static "images/imagenew.jpg" %}"
+         alt="people">
+    <a href="http://127.0.0.1:8000/home/object_recognition/"
+       class="btn btn-info">
+        Upload a new photo
+    </a>
+    <a href="http://127.0.0.1:8000/home/"
+       class="btn btn-info">
+        Home
+    </a>
 
 {% endblock %}

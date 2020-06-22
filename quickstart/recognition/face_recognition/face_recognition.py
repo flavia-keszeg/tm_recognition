@@ -1,11 +1,7 @@
-import os
-
 from imageai.Prediction.Custom import CustomImagePrediction
 
 
 def face_recognition(imageName):
-    execution_path = os.getcwd()
-
     prediction = CustomImagePrediction()
     prediction.setModelTypeAsResNet()
     prediction.setModelPath("./quickstart/recognition/face_recognition/model_ex-030_acc-1.000000.h5")
