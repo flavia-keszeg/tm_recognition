@@ -1,6 +1,6 @@
 tensorflow==1.13.1
 django-extensions==2.2.9
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 imageai==2.0.2
 numpy==1.18.1
 scipy==1.18.1
